@@ -19,11 +19,8 @@ create table eleitor(
  , enderecoCompleto VARCHAR(45)
  , cep VARCHAR(45)
  , bairro VARCHAR(45)
- , DDDTel_1 VARCHAR(15)
  , telefone_1 VARCHAR(15)
- , DDDTel_2 VARCHAR(15)
  , telefone_2 VARCHAR(15)
- , DDDTel_3 VARCHAR(15)
  , telefone_3 VARCHAR(15)
  , primary key (idEleitor)
  );
