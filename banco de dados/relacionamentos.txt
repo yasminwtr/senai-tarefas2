@@ -1,0 +1,38 @@
+relacionamentos
+
+1:1 -> fusão de tabelas, exceto quando é (0,1) x (0,1), que se torna adição de tabelas.
+junta todos os elementos em uma tabela só.
+
+script >>>>
+CREATE TABLE ENTIDADE_AB (
+ID_A INT NOT NULL,
+ID_B INT NOT NULL,
+PRIMARY KEY (ID_A, ID_B),
+);
+
+_________________________________________________
+
+1:n -> adição de coluna
+cria as tabelas separadamente e conecta com a linha pontilhada na tabela B, adicionando o ID da tabela A.
+
+script >>>>
+CREATE TABLE ENTIDADE_B (
+ID_B INT NOT NULL,
+ID_A INT,
+PRIMARY KEY (ID_B),
+FOREIGN KEY (ID_A) REFERENCES ENTIDADE_A (ID_A)
+);
+
+_________________________________________________
+
+n:n -> tabela própria
+cria as tabelas separadamente e depois uma terceira que representa a relação. conectar com a linha reta.
+
+script >>>>
+CREATE TABLE RELACAO (
+ID_A INT NOT NULL,
+ID_B INT NOT NULL,
+PRIMARY KEY (ID_A, ID_B),
+FOREIGN KEY (ID_A) REFERENCES ENTIDADE_A (ID_A)
+FOREIGN KEY (ID_B) REFERENCES ENTIDADE_B (ID_B)
+);

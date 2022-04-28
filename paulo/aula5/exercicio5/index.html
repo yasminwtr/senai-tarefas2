@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini banco</title>
+</head>
+<body>
+    <h1>bem vindo ao mini banco</h1>
+
+    <p>Digite o valor que você deseja sacar:</p>
+    <input type="number" id="saque"><br>
+    <button onclick="conta.sacar(valorSaque)">sacar</button><br><br>
+
+    <p>Digite o valor que você deseja depositar:</p>
+    <input type="number" id="deposito"><br>
+    <button onclick="conta.depositar()">depositar</button><br><br>
+
+    <button onclick="conta.toString()">mostrar extrato</button>
+
+
+<script>
+class Conta {
+    #numeroAgencia
+    #numeroConta
+    #saldo
+
+    constructor(numeroAgencia, numeroConta, saldo){
+        this.#numeroAgencia = numeroAgencia
+        this.#numeroConta = numeroConta
+        this.#saldo = saldo
+    }
+
+    get numeroAgencia(){ return this.#numeroAgencia }
+    set numeroAgencia(numeroAgencia){ this.#numeroAgencia = numeroAgencia }
+
+    get numeroConta(){ return this.#numeroConta }
+    set numeroConta(numeroConta){ this.#numeroConta = numeroConta }
+
+    get saldo(){ return this.#saldo }
+
+    depositar(valor){
+        if(valor > 0){
+            this.#saldo += valor
+            alert("Valor depositado com sucesso!")
+        }
+    }
+
+    sacar(valorSaque){
+        let valorSaque = document.getElementById('saque')
+        if(valorSaque > 0 && valorSaque <= this.#saldo){
+            this.#saldo -= valorSaque
+            alert("Valor sacado com sucesso!")
+        }
+    }
+
+    toString(){
+        return alert("Agência: " + this.#numeroAgencia + "\nConta: " + this.#numeroConta + "\nSaldo: " + this.#saldo)
+    }
+}
+
+let conta = new Conta('12345-6', '3456-7', 645)
+
+// conta.depositar(1000)
+// conta.sacar(500)
+// conta.getSaldo()
+</script>
+    
+</body>
+</html>
