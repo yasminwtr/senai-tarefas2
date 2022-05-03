@@ -1,0 +1,24 @@
+(0,1) - (1,1)
+uma empresa criou uma rede social e deseja ter controle sobre quantas contas
+cada pessoa pode ter.
+-------------------------------------------------------------------------------
+(0,1) - (0,N)
+uma empresa deseja ter controle sobre quantos computadores estão em uso pelos
+funcionários. 
+-------------------------------------------------------------------------------
+(0,1) - (1,N)
+Um departamento quer controlar a quantidade de funcionários nos departamentos.
+-------------------------------------------------------------------------------
+(1,1) - (0,N)
+cadastro para coleta de lixo eletrônico
+Um site permite o cadastro por empresas de pontos que coletam resíduos eletrônicos.
+-------------------------------------------------------------------------------
+(1,1) - (1,N)
+Um hospital quer ter acesso aos pacientes que os medicos tenham atendido.
+-------------------------------------------------------------------------------
+(0,N) - (0,N)
+uma empresa de vendas online deseja saber quais dos seus usuários cadastrados 
+já realizaram compras no sistema.
+-------------------------------------------------------------------------------
+(1,N) - (0,N)
+Uma empresa quer controlar os cadastros feitos em seus cursos de diversos tipos.
