@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco do Brasil</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form class="box">
+        <h4 class="title is-4">Banco do Brasil</h4>
+
+        <div class="field">
+          <label class="label">Titular</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Nome completo" id="titular_id">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Data de nascimento</label>
+          <div class="control">
+            <input class="input" type="date" id="dataNascimento_id">
+          </div>
+        </div>
+      
+        <button class="button is-danger" onclick="criarConta()">Criar conta</button>
+      </form>
+
+<script src="script.js"></script>
+</body>
+</html>

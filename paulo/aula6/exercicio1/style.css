@@ -1,0 +1,12 @@
+body, html{
+    background-color: hsl(0, 0%, 71%);
+}
+
+.box{
+    width: 50%;
+    margin: 8% auto;
+}
+
+.is-danger{
+    margin-top: 2%;
+}
