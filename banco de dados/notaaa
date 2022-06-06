@@ -1,0 +1,21 @@
+-- questão 7
+select count(idcliente), sexo from cliente group by sexo;
+
+-- questão 8
+select produto.nome, produto.categoria, produto.preco from produto order by nome;
+
+-- questão 9
+select produto.categoria, sum(item_pedido.qtde), avg(item_pedido.qtde) from produto
+	inner join item_pedido
+	on item_pedido.idproduto = produto.idproduto
+group by produto.categoria
+order by produto.categoria;
+
+-- questão 10:
+select produto.idproduto, sum(item_pedido.qtde), item_pedido.preco_unitario from produto
+	inner join item_pedido
+    on item_pedido.idproduto = produto.idproduto
+group by produto.idproduto;
+
+-- questão 13
+select * from pedido where idcliente = 3;
